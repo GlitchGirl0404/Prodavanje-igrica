@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div style = "width:100%">
-        <div style = "width:40%; float:left">
+        <div style = "width:30%; float:left">
             <%
                 System.Data.DataSet ds = new System.Data.DataSet();
                 ds = Prodavanje_igrica.Klasa.ClanSelect(Session["korisnik"].ToString());
@@ -47,7 +47,7 @@
             <br />
             <asp:Button ID="Button1" runat="server" Text="Dodaj" OnClick="Button1_Click" />
         </div>
-        <div style = "widht:60%; float:left">
+        <div style = "width:70%; float:left">
             <%
                 ds = new System.Data.DataSet();
                 ds = Prodavanje_igrica.Klasa.IgriceClana(Session["korisnik"].ToString());
@@ -87,6 +87,10 @@
                     Response.Write("<td>");
                     Response.Write(ds.Tables[0].Rows[i]["zanr"]);
                     Response.Write("</td>");
+                    Response.Write("<td>");
+                    Response.Write("<a href=Profile.aspx?game=" + ds.Tables[0].Rows[i]["igrica_id"] + "&rel=da>Delete</a>");
+                    Response.Write("</td>");
+                    Response.Write("<tr>");
                 }
                 Response.Write("</table>");
             %>

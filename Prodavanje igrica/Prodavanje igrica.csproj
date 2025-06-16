@@ -67,12 +67,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Developers.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Prodavnica.aspx" />
     <Content Include="Profile.aspx" />
+    <Content Include="Sistem.aspx" />
     <Content Include="Web.config" />
+    <Content Include="Zanr.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Developers.aspx.cs">
+      <DependentUpon>Developers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Developers.aspx.designer.cs">
+      <DependentUpon>Developers.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Klasa.cs" />
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -103,6 +113,20 @@
       <DependentUpon>Profile.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sistem.aspx.cs">
+      <DependentUpon>Sistem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistem.aspx.designer.cs">
+      <DependentUpon>Sistem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Zanr.aspx.cs">
+      <DependentUpon>Zanr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Zanr.aspx.designer.cs">
+      <DependentUpon>Zanr.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Master.Master" />

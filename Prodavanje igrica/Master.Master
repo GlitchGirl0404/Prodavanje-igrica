@@ -9,16 +9,18 @@
 <body>
     <form id="form1" runat="server">
         <div style = "width:100%">
-            <div style = "width:20%; float:left">
+            <div style = "width:10%; float:left">
                 <a href="Profile.aspx">Profile</a>
                 <br />
                 <a href="Prodavnica.aspx">Prodavnica</a>
                 <br />
                 <a href="Developers.aspx">Developers</a>
                 <br />
-                <a href="System.aspx">System</a>
+                <a href="Sistem.aspx">System</a>
+                <br />
+                <a href="Zanr.aspx">Zanr</a>
             </div>
-            <div style = "width:80%; float:left">
+            <div style = "width:90%; float:left">
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 </asp:ContentPlaceHolder>
             </div>

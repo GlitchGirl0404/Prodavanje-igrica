@@ -10,7 +10,15 @@ namespace Prodavanje_igrica
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            string clan = Session["korisnik"].ToString();
+            int igrica = Convert.ToInt32(Request.QueryString["game"]);
+            int rezultat;
+            rezultat = Klasa.ClanIgricaDelete(clan, igrica);
+            string rel = Request.QueryString["rel"];
+            if (rel == "da")
+            {
+                Response.Redirect("Profile.aspx");
+            }
         }
         protected void Button1_Click(object sender, EventArgs e)
         {
@@ -22,7 +30,7 @@ namespace Prodavanje_igrica
             }
             else
             {
-                Response.Redirect("greska.aspx");
+                Response.Redirect("Greska.aspx");
             }
         }
     }
